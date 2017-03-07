@@ -5,25 +5,11 @@
  value "popup.html".
  -->
 <html>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+
 <head>
     <title>Getting Started Extension's Popup</title>
-    <style>
-        body {
-            /*font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;*/
-            /*font-size: 100%;*/
-            width: 200px;
-            text-align: center;
-        }
-        
-        /*#status {*/
-            /* avoid an excessively wide status text */
-            /*white-space: pre;*/
-            /*text-overflow: ellipsis;*/
-            /*overflow: hidden;*/
-            /*max-width: 4000px;*/
-        /*}*/
-    </style>
+    <link rel="stylesheet" href="css/app.css">
 
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
@@ -31,11 +17,15 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-    <script src="popup.js"></script>
+    <script src="js/popup.js"></script>
 </head>
 
-<body>
+<body style="width: 200px; text-align: center;">
     <div id="status"></div>
+    <div style="margin-bottom: 5px; margin-top: 5px;">
+        <button id="startBtn" class="w3-btn w3-ripple w3-green w3-tiny">START</button>
+        <button id="stopBtn" class="w3-btn w3-ripple w3-red w3-tiny">STOP</button>
+    </div>
 </body>
 
 </html>
